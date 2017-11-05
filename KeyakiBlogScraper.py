@@ -13,10 +13,10 @@ def create_directory(directory_name):
     create_directory関数
     ディレクトリが既に存在している場合は何もしない
     """
-    if os.path.isdir("./" + directory_name):
+    if os.path.isdir("./img/" + directory_name):
         return True
     else:
-        os.mkdir("./" + directory_name)
+        os.makedirs("./img/" + directory_name)
         return True
 
 def get_today_datetime():
@@ -33,7 +33,7 @@ def main():
     """
     main関数
     """
-    member_num_str = "13"
+    member_num_str = "33"
 
     # アクセスするURL(欅坂の公式ブログのURL)
     url = "http://www.keyakizaka46.com/s/k46o/diary/member/list?ima=0000&ct=" + member_num_str
@@ -56,7 +56,7 @@ def main():
 
     for img_tag in img_tags:
         img_src = img_tag.get("src")
-        urllib.request.urlretrieve(img_src, "./" + member_name +  "/" +
+        urllib.request.urlretrieve(img_src, "./img/" + member_name +  "/" +
                                    today_str + member_name + str(img_cnt) + ".jpg")
         img_cnt += 1
 
