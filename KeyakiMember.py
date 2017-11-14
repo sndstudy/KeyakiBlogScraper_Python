@@ -45,6 +45,7 @@ MEMBER_LIST = {"01":"ishimori_nijika",
 
 def get_member_name(member_num):
     """
-    欅坂のメンバーを定義するモジュール
+    欅坂のメンバー名を取得する関数
+    引数:2桁の数字(公式ブログでのメンバーページ)
     """
     return MEMBER_LIST[member_num]

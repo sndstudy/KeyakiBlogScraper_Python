@@ -33,7 +33,7 @@ def main():
     """
     main関数
     """
-    member_num_str = "33"
+    member_num_str = "25"
 
     # アクセスするURL(欅坂の公式ブログのURL)
     url = "http://www.keyakizaka46.com/s/k46o/diary/member/list?ima=0000&ct=" + member_num_str
