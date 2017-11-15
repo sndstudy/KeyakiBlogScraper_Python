@@ -13,11 +13,8 @@ def create_directory(directory_name):
     create_directory関数
     ディレクトリが既に存在している場合は何もしない
     """
-    if os.path.isdir("./img/" + directory_name):
-        return True
-    else:
+    if not os.path.isdir("./img/" + directory_name):
         os.makedirs("./img/" + directory_name)
-        return True
 
 def get_today_datetime():
     """
