@@ -47,5 +47,16 @@ def get_member_name(member_num):
     """
     欅坂のメンバー名を取得する関数
     引数:2桁の数字(公式ブログでのメンバーページ)
+    戻り値:リストに存在した場合はそれに紐づくメンバー名を返却。
+    無い場合は米さんの名前を返却。
     """
-    return MEMBER_LIST[member_num]
+    return MEMBER_LIST.get(member_num, MEMBER_LIST.get("19"))
+
+def check_member_number(member_num):
+    """
+    公式ブログのメンバーページにある数字かチェックする関数
+    引数:2桁の数字(公式ブログでのメンバーページ)
+    戻り値:リストに存在する数字であればそのまま返却。
+    無い場合は米さんのメンバー数字（19）を返却。
+    """
+    return MEMBER_LIST.get(member_num, "19")
