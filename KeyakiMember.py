@@ -59,4 +59,8 @@ def check_member_number(member_num):
     戻り値:リストに存在する数字であればそのまま返却。
     無い場合は米さんのメンバー数字（19）を返却。
     """
-    return MEMBER_LIST.get(member_num, "19")
+    if member_num in MEMBER_LIST:
+        return member_num
+    else:
+        return "19"
+    

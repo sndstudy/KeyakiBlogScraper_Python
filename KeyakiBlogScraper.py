@@ -30,7 +30,7 @@ def main():
     """
     main関数
     """
-    member_num_str = "250"
+    member_num_str = "25"
 
     member_num_str = KeyakiMember.check_member_number(member_num_str)
 
