@@ -1,3 +1,6 @@
+"""
+テストモジュール
+"""
 import unittest
 from KeyakiMember import get_member_name
 
