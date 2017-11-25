@@ -63,4 +63,3 @@ def check_member_number(member_num):
         return member_num
     else:
         return "19"
-    

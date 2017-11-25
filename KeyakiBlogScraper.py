@@ -5,6 +5,7 @@ import urllib.request
 import urllib.error
 import os
 import datetime
+import sys
 import KeyakiMember
 from bs4 import BeautifulSoup
 
@@ -25,12 +26,19 @@ def get_today_datetime():
 
     return  str(today.year)+str(today.month)+str(today.day)+str(today.hour)+str(today.minute)
 
+def check_arg(arg):
+    """
+    check_arg関数
+    """
+    if len(arg) == 1:
+        return "19"
+    return arg[1]
 
 def main():
     """
     main関数
     """
-    member_num_str = "25"
+    member_num_str = check_arg(sys.argv)
 
     member_num_str = KeyakiMember.check_member_number(member_num_str)
 
