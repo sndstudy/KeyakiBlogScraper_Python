@@ -33,15 +33,7 @@ MEMBER_LIST = {"01":"ishimori_nijika",
                "31":"takase_mana",
                "32":"takamoto_ayaka",
                "33":"higashimura_mei",
-               "34":"kanemura_miku",
-               "35":"kawata_hina",
-               "36":"kosaka_nao",
-               "37":"tomita_suzuka",
-               "38":"nibu_akari",
-               "39":"hamagishi_hiyori",
-               "40":"matsuda_konoka",
-               "41":"miyata_manamo",
-               "42":"watanabe_miho"}
+               "1000":"hiragana2"}
 
 def get_member_name(member_num):
     """
