@@ -6,8 +6,8 @@ import urllib.error
 import os
 import datetime
 import sys
-import KeyakiMember
 from bs4 import BeautifulSoup
+import keyaki_member
 
 def create_directory(directory_name):
     """
@@ -40,7 +40,7 @@ def main():
     """
     member_num_str = check_arg(sys.argv)
 
-    member_num_str = KeyakiMember.check_member_number(member_num_str)
+    member_num_str = keyaki_member.check_member_number(member_num_str)
 
     # アクセスするURL(欅坂の公式ブログのURL)
     url = "http://www.keyakizaka46.com/s/k46o/diary/member/list?ima=0000&ct=" + member_num_str
@@ -51,7 +51,7 @@ def main():
     # htmlをBeautifulSoupで扱う
     soup = BeautifulSoup(html, "html.parser")
 
-    member_name = KeyakiMember.get_member_name(member_num_str)
+    member_name = keyaki_member.get_member_name(member_num_str)
 
     create_directory(member_name)
 

@@ -2,11 +2,11 @@
 テストモジュール
 """
 import unittest
-from KeyakiMember import get_member_name
+from keyaki_member import get_member_name
 
 class TestKeyakiMember(unittest.TestCase):
     """
-    KeyakiMember.py
+    keyaki_member.py
     テストクラス
     """
     def test_get_member_name(self):
